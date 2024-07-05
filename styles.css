@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.theme-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#sun-icon,
+#moon-icon {
+    width: 60px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+    height: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.chat-messages {
+    overflow-y: scroll;
+    max-height: calc(100% - 80px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 50px;
+    position: sticky;
+    bottom: 0;
+    transition: background-color 0.3s;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.dropdown-content button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dropdown-content button img {
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+input[type="text"] {
+    width: calc(100% - 90px);
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background-color: #333;
+    color: white;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.send-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-button img {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes sunMoonAnimation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
