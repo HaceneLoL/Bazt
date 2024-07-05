@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع مضحك</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>موقع الدردشة</title>
 </head>
-<body>
-    <div class="container">
-        <img id="cristianoImage" src="images/i1.png" alt="Cristiano Ronaldo">
-        <p>عدد الضغطات: <span id="clickCount">0</span></p>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">
+            <img src="path/to/sun-moon-toggle.png" alt="تبديل الوضع" id="sun-moon-toggle">
+        </button>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
-    <script src="scripts/script.js"></script>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="input-container">
+            <div class="dropdown">
+                <button class="add-button">
+                    <img src="path/to/plus-icon-light.png" alt="إضافة" id="add-icon">
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="sendImage()">
+                        <img src="path/to/camera-icon-light.png" alt="إرسال صورة" id="camera-icon">
+                    </button>
+                    <button onclick="sendImageFromGallery()">
+                        <img src="path/to/gallery-icon-light.png" alt="إرسال من المعرض" id="gallery-icon">
+                    </button>
+                    <button onclick="sendVoiceMessage()">
+                        <img src="path/to/voice-icon-light.png" alt="إرسال رسالة صوتية" id="voice-icon">
+                    </button>
+                </div>
+            </div>
+            <input type="text" id="message-input" placeholder="اكتب رسالتك هنا...">
+            <button class="send-button" onclick="sendMessage()">
+                <img src="path/to/send-icon-light.png" alt="إرسال" id="send-icon">
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
